@@ -9,3 +9,6 @@ while kuchi < b :
     kuchi = (a - 1) * count + 1
 else :
     print(count) """
+
+
+"""要求数１の時は例外処理だよね"""
