@@ -4,6 +4,9 @@ a, b = map(int, input().split())
 # 3個
 a, b, c = map(int, input().split())
 
+# 入力を一行で受け取ってリスト化（リスト内包表記）
+this_list = [int(e) for e in input().split()]
+
 # 一番大きい奴を返す
 max()
 
