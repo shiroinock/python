@@ -1,23 +1,22 @@
-#フィボナッチ数列をいい感じに表示するやつ
+a, b = map(int, input().split())
 
-def fib1(n):
-  if n == 0:
-    return 0
-  if n == 1:
-    return 1
-  return fib1(n - 1) + fib1(n - 2)
+def factorization(a):
+        arr = []
+        temp = a
+        for i in range(2, int(-(-a**0.5//1))+1):
+            if temp%i==0:
+                cnt=0
+                while temp%i==0:
+                    cnt+=1
+                    temp //= i
+                arr.append([i, cnt])
 
-def fib2(n):
-  n0, n1 = 0, 1
-  for cnt in range(n):
-    n0, n1 = n1, n0 + n1
-  return n1
+        if temp!=1:
+            arr.append([temp, 1])
 
-print('call fib1')
-for x in range(10):
-  print(f'{fib1(x)}, ', end='')
-print()
-print('call fib2')
-for x in range(10):
-  print(f'{fib2(x)}, ', end='')
-print()
+        if arr==[]:
+            arr.append([a, 1])
+
+        return arr
+
+print(factorization(a))
