@@ -1,3 +1,5 @@
+a, b = 0, 0
+
 # 二分探索
 from bisect import bisect_left
 
@@ -5,7 +7,7 @@ from bisect import bisect_left
 while b:
     a, b = b, a % b
 
-# 素因数分解
+# 素因数分解する関数を作る
 def factorization(a):
     arr = []
     temp = a
@@ -24,3 +26,15 @@ def factorization(a):
         arr.append([a, 1])
 
     return arr
+
+# aの約数を列挙する
+
+a_divisors = []
+
+for i in range(1, int(a ** 0.5) + 1) :
+    if a % i == 0 :
+        a_divisors.append(i)
+        if a // i != i :
+            a_divisors.append(a // i)
+
+a_divisors.sort()
