@@ -4,4 +4,4 @@ m = int(input())
 
 for i in range(m) :
     p, x = map(int, input().split())
-    print
+    print(sum(t) - t[p - 1] + x)
