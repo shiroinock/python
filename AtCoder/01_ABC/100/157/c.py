@@ -16,6 +16,6 @@ for i in range(m):
 if ans == 0:
     if n > 1 and listans[0] == "0":
         listans[0] = "1"
-    ans = int("".join(listans))
+    ans = "".join(listans)
 
 print(ans)
