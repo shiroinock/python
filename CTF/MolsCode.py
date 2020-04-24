@@ -2,7 +2,7 @@ from getpass import getpass
 
 class MolsCodeConverter:
     def __init__(self):
-        self.chara_map =   {
+        self.char_map =   {
                             "A": ".-",
                             "B": "-...",
                             "C": "-.-.",
@@ -76,7 +76,7 @@ class MolsCodeConverter:
 
     def message_to_code(self, msg_list):
         for msg in msg_list:
-            code = self.chara_map[msg]
+            code = self.char_map[msg]
             self.code += code + " "
         else:
             self.code.rstrip()
@@ -85,8 +85,8 @@ class MolsCodeConverter:
     
     def code_to_message(self, code_list):
         for code in code_list:
-            chara = [k for k, v in self.chara_map.items() if v == code][0]
-            self.message += chara + " "
+            char = [k for k, v in self.char_map.items() if v == code][0]
+            self.message += char + " "
         else:
             self.message + "."
         
